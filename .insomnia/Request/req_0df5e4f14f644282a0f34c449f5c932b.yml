@@ -1,0 +1,278 @@
+_id: req_0df5e4f14f644282a0f34c449f5c932b
+type: Request
+parentId: fld_a0d6d9a64118440b933ea824c1a959b4
+modified: 1746024050396
+created: 1746001054336
+url: "{{ _.api }}/sertifikasi/new"
+name: Sertifikasi Baru
+description: >-
+  Required Multipart/FormData 
+
+
+  ```
+  		'nama_usaha'            => 'required',
+  		'status_usaha'          => 'required',
+  		'loc_lat'               => 'required',
+  		'loc_lng'               => 'required',
+  		'loc_addr'              => 'required',
+  		'is_daging'             => 'required|in:0,1',
+  		'rph_name'              => 'nullable',
+  		'product_name'          => 'required',
+  		'product_video'         => 'required',
+  		'product_desc'          => 'nullable',
+  		'product_desc_audio'    => 'nullable',
+  		'product_desc_img'      => 'nullable',
+  		'product_desc_pdf'      => 'nullable',
+  		'bank_id'               => 'nullable',
+  		'token'                 => 'nullable',
+  ```
+
+
+  * RPH Name akan berifat wajib jika is_daging = 1
+
+
+  * Semua file disini harus di upload di api /upload
+
+
+  Product Desc
+
+  ```
+
+  product_desc, product_desc_audio, product_desc_img, product_desc_pdf secara default nullable dan wajib diisi salah satu
+
+  ```
+
+
+  Contoh isi product_desc_audio: 
+
+  ```
+
+  upload/files/2025/04/v3JnDy8WkQPuE3Umqh45_12_5cca2629dfaa33f23c9be1756c8088ab_file.ogg
+
+  ```
+
+  Contoh isi product_desc_img: 
+
+  ```
+
+  upload/photos/2025/04/v3JnDy8WkQPuE3Umqh45_12_5cca2629dfaa33f23c9be1756c8088ab_file.jpg
+
+  ```
+
+  Contoh isi product_desc_video: 
+
+  ```
+
+  upload/videos/2025/04/v3JnDy8WkQPuE3Umqh45_12_5cca2629dfaa33f23c9be1756c8088ab_file.mp4
+
+  ```
+
+
+  Contoh isi product_desc_pdf: 
+
+  ```
+
+  upload/files/2025/04/v3JnDy8WkQPuE3Umqh45_12_5cca2629dfaa33f23c9be1756c8088ab_file.pdf
+
+  ```
+
+
+  Bank / Token
+
+  ```
+
+  Wajib memilih salah satu object bank_id atau token
+
+  ```
+
+  Data Bank Dapat di lihat di folder Master Data / Bank
+
+
+  *Jika Menggunakan Token Wajib Verifikasi Token setelah user mengisi token tersebut
+
+
+
+  Example Response With bank_id
+
+  ```
+
+  {
+  	"status": true,
+  	"data": {
+  		"id": 26,
+  		"order_id": "GH-00000026",
+  		"user_id": 2806,
+  		"bank_id": 4,
+  		"iap_apple_id": 0,
+  		"iap_android_id": 0,
+  		"pro_id": 0,
+  		"quota": 0,
+  		"profile_id": 0,
+  		"comp_id": 0,
+  		"comp_bundle_id": 0,
+  		"type": "cert",
+  		"title": "Mandiri Virtual Account",
+  		"code": "889089999438484",
+  		"amount": 230000,
+  		"unique_code": 0,
+  		"proof": "https:\/\/app.goohalal.com\/v1\/",
+  		"status": "0",
+  		"created_at": "2025-04-30 21:40:10",
+  		"due_date": "2025-05-01 21:40:10",
+  		"updated_at": null,
+  		"dev_mode": 1,
+  		"cert_id": 166,
+  		"amount_f": "Rp. 230.000",
+  		"uniquecode_f": "Rp. 0",
+  		"gross_amount": 230000,
+  		"gross_amount_f": "Rp. 230.000",
+  		"status_f": "Waiting Payment",
+  		"bank": {
+  			"id": 4,
+  			"title": "Bank Mandiri",
+  			"name": "Mandiri Virtual Account",
+  			"account": "virtual_bank_account",
+  			"description": null,
+  			"type": "va",
+  			"type_title": "Virtual Account",
+  			"code": "MANDIRI",
+  			"images": "https:\/\/app.goohalal.com\/v1\/upload\/photos\/bank\/ic-mandiri.png",
+  			"images_src": "https:\/\/app.goohalal.com\/v1\/upload\/photos\/bank\/mandiri.png",
+  			"pay_fee": "4440",
+  			"withdraw_fee": 5000,
+  			"source": "xendit",
+  			"is_pay": 1,
+  			"is_withdraw": 0,
+  			"due_date_num": 1,
+  			"due_date_type": "day",
+  			"min_amount": 10000,
+  			"max_amount": null,
+  			"status": 1,
+  			"orders": 0
+  		},
+  		"is_cancel": true,
+  		"is_change": true,
+  		"is_pay": true,
+  		"sertifikasi_id": 166
+  	},
+  	"message": [
+  		"Berhasil! Silahkan lakukan pembayaran"
+  	]
+  }
+
+  ```
+
+
+  Example Response With token
+
+  ```
+
+  {
+  	"status": true,
+  	"data": {
+  		"sertifikasi_id": 166
+  	},
+  	"message": [
+  		"Berhasil! Silahkan lakukan pembayaran"
+  	]
+  }
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_ebfe0e841e0a4fa389ccd608aed1bae3
+      name: nama_usaha
+      value: Cuanki Duduk
+      description: ""
+    - id: pair_18b02e5e8fd047b09ab2167eb3af4523
+      name: status_usaha
+      value: Milik Sendiri
+      description: ""
+    - id: pair_dc275d55218b456bbc6f0fbc82303ee3
+      name: nib
+      value: nullable
+      description: ""
+      disabled: true
+    - id: pair_64ddf73328b548a289878d09c981da05
+      name: loc_lat
+      value: "-6.8815378"
+      description: ""
+    - id: pair_750488dd1c424908872aa7d3ab48b24e
+      name: loc_lng
+      value: "108.9962247"
+      description: ""
+    - id: pair_6798823d68ac4627ab1dfc9750d2ff42
+      name: loc_addr
+      value: Luwungragi, Brebes, Jawa Tengah, Jawa, Indonesia
+      description: ""
+    - id: pair_2613b886988549b289043fef886690db
+      name: is_daging
+      value: "0"
+      description: ""
+    - id: pair_41c3d3f6dc19480fb557f0f3d02ff487
+      name: rph_name
+      value: ""
+      description: ""
+      disabled: true
+    - id: pair_cfeb84e7893b43a9807fd043a106233f
+      name: product_name
+      value: Bakso Cuanki
+      description: ""
+    - id: pair_0a6de3bbdca64d8f81a808a411c54a92
+      name: product_desc
+      value: ""
+      description: ""
+      disabled: true
+    - id: pair_4f1241cbf90c49c984c1a50884c01c8b
+      name: product_desc_audio
+      value: upload/files/2025/04/v3JnDy8WkQPuE3Umqh45_12_5cca2629dfaa33f23c9be1756c8088ab_file.ogg
+      description: ""
+      disabled: false
+    - id: pair_6f6b917d4b5346299165d3415bef8c93
+      name: product_desc_img
+      value: url image
+      description: ""
+      disabled: true
+    - id: pair_fe8d7d8d96d74080ae14838f31c1f669
+      name: product_desc_pdf
+      value: url pdf / word
+      description: ""
+      disabled: true
+    - id: pair_cd7b0e544cbd4c9c9e7c0ef1e375e675
+      name: product_video
+      value: upload/videos/2025/04/9bgvjyoqYfJq3tfafoXD_12_238f0b0a739c56a49d932c85792f3144_video.mp4
+      description: ""
+    - id: pair_e59a1819ffb1457d9e8d0e500f999f19
+      name: addon_file
+      value: addon file url seperate with comma
+      description: ""
+      disabled: true
+    - id: pair_1a3734f51c6843f8b41b20c163112b5f
+      name: bank_id
+      value: "4"
+      description: ""
+      disabled: false
+    - id: pair_03c7af8b049f4ea3a697a65a4c307f2f
+      name: token
+      value: SEHATI
+      description: ""
+      disabled: true
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+  - id: pair_7a80f2fbf14b4ad98072880049d4e09a
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.user }}"
+metaSortKey: -1745999818154.9219
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,27 @@
+_id: req_0c56e880c921482d8134075ea29f4013
+type: Request
+parentId: fld_ec20792a72b745be8e2d356bf4843b8b
+modified: 1746025361793
+created: 1746009182336
+url: "{{ _.api }}/data/bank"
+name: Bank
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_abe4008b637647ada10b85b9346f3751
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.user }}"
+metaSortKey: -1746009182336
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

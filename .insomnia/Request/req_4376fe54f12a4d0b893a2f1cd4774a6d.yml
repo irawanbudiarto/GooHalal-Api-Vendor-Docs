@@ -1,0 +1,111 @@
+_id: req_4376fe54f12a4d0b893a2f1cd4774a6d
+type: Request
+parentId: fld_c8df452b2cd147649b9d7e6d9fc92417
+modified: 1746013083736
+created: 1746004624744
+url: "{{ _.api }}/sertifikasi-auditor"
+name: Data List
+description: >-
+  Required Query Header
+
+  ```
+
+  "filter": "all/history"
+
+  ```
+
+
+  Example Response Success
+
+  ```
+
+  {
+  	"status": true,
+  	"data": {
+  		"current_page": 1,
+  		"data": [
+  			{
+  				"sertifikasi_id": 123,
+  				"sertifikasi_reg_no": null,
+  				"user_id": 2806,
+  				"nib": "",
+  				"nama_pu": "Egg Goreng",
+  				"ktp": {},
+  				"ktp_id": 28,
+  				"phone": null,
+  				"usaha_nama": "Fried Egg",
+  				"is_daging": 0,
+  				"rph_name": "",
+  				"pu_ktp_data": null,
+  				"fatwa_id": null,
+  				"step": 0,
+  				"status": "pending",
+  				"reject_reason": null,
+  				"notifikasi": 1,
+  				"accept_ratio": null,
+  				"e_cert_file": null,
+  				"created_at": "2025-03-11 21:55:29",
+  				"updated_at": "2025-03-12 16:55:10",
+  				"method": null,
+  				"status_teks": "Pengajuan anda sedang di review oleh Anwar Muhammad",
+  				"created_at_f": "11\/03\/2025 21:55",
+  				"status_f": "Menunggu"
+  			}
+  		],
+  		"first_page_url": "https:\/\/app.goohalal.com\/v1\/vendor\/sertifikasi-auditor?page=1",
+  		"from": 1,
+  		"last_page": 1,
+  		"last_page_url": "https:\/\/app.goohalal.com\/v1\/vendor\/sertifikasi-auditor?page=1",
+  		"links": [
+  			{
+  				"url": null,
+  				"label": "&laquo; Previous",
+  				"active": false
+  			},
+  			{
+  				"url": "https:\/\/app.goohalal.com\/v1\/vendor\/sertifikasi-auditor?page=1",
+  				"label": "1",
+  				"active": true
+  			},
+  			{
+  				"url": null,
+  				"label": "Next &raquo;",
+  				"active": false
+  			}
+  		],
+  		"next_page_url": null,
+  		"path": "https:\/\/app.goohalal.com\/v1\/vendor\/sertifikasi-auditor",
+  		"per_page": 10,
+  		"prev_page_url": null,
+  		"to": 5,
+  		"total": 5
+  	},
+  	"message": [
+  		"Berhasil"
+  	]
+  }
+
+  ```
+method: GET
+body: {}
+parameters:
+  - id: pair_e393886070bf4d3494157132218de07c
+    name: filter
+    value: history
+    description: ""
+headers:
+  - id: pair_7a80f2fbf14b4ad98072880049d4e09a
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.auditor }}"
+metaSortKey: -1746000918381
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,68 @@
+_id: req_66221327c15a41708ade3fb0e92fc464
+type: Request
+parentId: fld_a34d28b90e7d466ebc08019e712cb251
+modified: 1746013576410
+created: 1746004954120
+url: "{{ _.api }}/sertifikasi-auditor/165/verify"
+name: Verify Product
+description: |-
+  Required Body Json
+  ```
+  {
+  	'video_url'     => 'required',
+  	'lat'           => 'required',
+  	'lng'           => 'required',
+  	'audio_url'     => 'nullable',
+  	'accept'        => 'required|in:Y/N',
+  	'note'          => 'required|minimal text length:10'
+  }
+  ```
+
+  URL
+  ```
+  {{ _.api }}/sertifikasi-auditor/{sertifikasi_id}/verify
+  ```
+
+  Example Response Success
+
+  ```
+  {
+  	"status": true,
+  	"data": {
+  		"pendamping_id": 1231,
+  		"sertifikasi_id": "123"
+  	},
+  	"message": "Hasil audit berhasil diterima"
+  }
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"video_url": "upload/videos/2025/04/Seui5iDKJRkGSXjnASkF_12_d100094f93ccffa0b03aadb3af8231aern_image_picker_lib_temp_4c0ef3b5-7edd-48be-b0c0-c62570977b9c.mp4",
+    	"lat": "-6.8815378",
+    	"lng": "108.9962247",
+    	"audio_url": "upload/files/2025/04/v3JnDy8WkQPuE3Umqh45_12_5cca2629dfaa33f23c9be1756c8088ab_file.ogg",
+    	"accept": "Y",
+    	"note": "Sudah sesuai dengan ketentuan"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - id: pair_7a80f2fbf14b4ad98072880049d4e09a
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.auditor }}"
+metaSortKey: -1746004793930
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

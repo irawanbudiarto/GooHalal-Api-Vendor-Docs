@@ -1,0 +1,47 @@
+_id: req_99bc6ff792754b239ab5995643e02590
+type: Request
+parentId: fld_a22f73d86be9442094edcff1b30977fa
+modified: 1746023319132
+created: 1746005143914
+url: "{{ _.api }}/sertifikasi-fatwa/165/verify"
+name: Pemberian Fatwa
+description: |-
+  URL
+  ```
+  {{ _.api }}/sertifikasi-fatwa/165/verify
+  ```
+
+  Required Body Json
+  ```
+  {
+  	'approve'           => 'required|in:Y / N',
+  	'summary'           => 'nullable', long text max 4000
+  }
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"approve": "Y",
+    	"summary": "Produk sudah sesuai syariat agama Islam dan sesuai peraturan Fatwa MUI"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - id: pair_7a80f2fbf14b4ad98072880049d4e09a
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.fatwa }}"
+metaSortKey: -1746004793930
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

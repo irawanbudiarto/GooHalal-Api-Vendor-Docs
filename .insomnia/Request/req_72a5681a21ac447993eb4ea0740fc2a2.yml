@@ -1,0 +1,60 @@
+_id: req_72a5681a21ac447993eb4ea0740fc2a2
+type: Request
+parentId: fld_36dd2e4e314e4e998d4934ae884e3b70
+modified: 1746025801050
+created: 1746000224863
+url: "{{ _.api }}/auth/register"
+name: Register
+description: |-
+  Required Body JSON
+
+
+  ```
+  {
+  	'email' => 'required',
+  	'phone' => 'required | minimal 8',
+  	'password' => 'required | minimal 6',
+  	'confirmPassword' => 'required | minimal 6'
+  }
+  ```
+
+  Example Response Success
+  ```
+  {
+  	"status": true,
+  	"data": {
+  		"username": "username_537"
+  	},
+  	"message": [
+  		"Berhasil Daftar Akun. Silahkan Masuk"
+  	]
+  }
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email": "",
+    	"phone": "",
+    	"password": "",
+    	"confirmPassword": ""
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_6f47d8c3bc014ef68fc58335673d430f
+  - id: pair_af9e5128d554454b810460df231a182f
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication: {}
+metaSortKey: -1745661496439
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

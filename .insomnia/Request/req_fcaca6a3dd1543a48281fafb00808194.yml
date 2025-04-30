@@ -1,0 +1,40 @@
+_id: req_fcaca6a3dd1543a48281fafb00808194
+type: Request
+parentId: fld_c8df452b2cd147649b9d7e6d9fc92417
+modified: 1746013157264
+created: 1746004624755
+url: "{{ _.api }}/sertifikasi-auditor/listener"
+name: Listener Tugas
+description: |-
+  Example Response Success
+
+  ```
+  {
+  	"status": true,
+  	"data": {
+  		"sertifikasi_id": 123
+  	},
+  	"message": [
+  		"Berhasil"
+  	]
+  }
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_7a80f2fbf14b4ad98072880049d4e09a
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.auditor }}"
+metaSortKey: -1746000918231
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

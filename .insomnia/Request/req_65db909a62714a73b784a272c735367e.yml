@@ -1,0 +1,27 @@
+_id: req_65db909a62714a73b784a272c735367e
+type: Request
+parentId: fld_36dd2e4e314e4e998d4934ae884e3b70
+modified: 1746026138865
+created: 1746000673504
+url: "{{ _.api }}/auth/logout"
+name: Logout
+description: Required Beaerer Token
+method: POST
+body: {}
+parameters: []
+headers:
+  - id: pair_af9e5128d554454b810460df231a182f
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.user }}"
+metaSortKey: -1745492688153.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

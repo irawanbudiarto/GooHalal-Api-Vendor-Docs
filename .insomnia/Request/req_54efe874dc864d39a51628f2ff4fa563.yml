@@ -1,0 +1,37 @@
+_id: req_54efe874dc864d39a51628f2ff4fa563
+type: Request
+parentId: fld_a34d28b90e7d466ebc08019e712cb251
+modified: 1746013205692
+created: 1746004624749
+url: "{{ _.api }}/sertifikasi-auditor/165"
+name: Detail
+description: |-
+  URL
+  ```
+  {{ _.api }}/sertifikasi-auditor/{sertifikasi_id}
+  ```
+
+  Rule status_auditor
+
+  - Jika "waiting" maka bisa ke api Ambil Tugas
+  - Jika "upload" maka bisa menggunakan api Verify KTP & Verify Product 
+  - Jika "analyze" maka bisa menggunakan api Analisis
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_7a80f2fbf14b4ad98072880049d4e09a
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.auditor }}"
+metaSortKey: -1746004807094
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

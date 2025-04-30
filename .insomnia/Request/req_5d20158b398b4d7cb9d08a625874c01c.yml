@@ -1,0 +1,60 @@
+_id: req_5d20158b398b4d7cb9d08a625874c01c
+type: Request
+parentId: fld_a34d28b90e7d466ebc08019e712cb251
+modified: 1746013276525
+created: 1746005075930
+url: "{{ _.api }}/sertifikasi-auditor/165/analyze"
+name: Analisis
+description: >-
+  URL
+
+  ```
+
+  {{ _.api }}/sertifikasi-auditor/{sertifikasi_id}/analyze
+
+  ```
+
+
+  Example Response Success
+
+  ```
+
+  {
+  	"status": true,
+  	"data": {
+  		"pu_vids": "https:\/\/app.goohalal.com\/v1\/upload\/videos\/2025\/04\/9bgvjyoqYfJq3tfafoXD_12_238f0b0a739c56a49d932c85792f3144_video.mp4",
+  		"pu_locs": "Luwungragi, Brebes, Jawa Tengah, Jawa, Indonesia",
+  		"pu_long_lat": "-6.8815378,108.9962247",
+  		"pu_maps_link": "https:\/\/www.google.com\/maps\/search\/?api=1&query=-6.8815378,108.9962247",
+  		"auditor_vids": "https:\/\/app.goohalal.com\/v1\/upload\/videos\/2025\/04\/Seui5iDKJRkGSXjnASkF_12_d100094f93ccffa0b03aadb3af8231aern_image_picker_lib_temp_4c0ef3b5-7edd-48be-b0c0-c62570977b9c.mp4",
+  		"auditor_locs": "Luwungragi, Brebes, Jawa Tengah, Jawa, Indonesia",
+  		"auditor_long_lat": "-6.8815378,108.9962247",
+  		"auditor_maps_link": "https:\/\/www.google.com\/maps\/search\/?api=1&query=-6.8815378,108.9962247",
+  		"ratio": 97,
+  		"ratio_percent": "97%"
+  	},
+  	"message": [
+  		"Berhasil"
+  	]
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_7a80f2fbf14b4ad98072880049d4e09a
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.auditor }}"
+metaSortKey: -1746004793830
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

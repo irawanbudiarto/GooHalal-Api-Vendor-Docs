@@ -1,0 +1,84 @@
+_id: req_2f158c869d814007a28a621a507b2cca
+type: Request
+parentId: fld_caf2935c107f4ec9952045dd355a67b9
+modified: 1746019946081
+created: 1746018230788
+url: "{{ _.api }}/upload/video-prod"
+name: Upload Video Produksi
+description: >
+  Required Multipart/FormData
+
+  ```
+
+  file: "required| FILE |mimes type: mp4,avi,mov,mkv|max duration: 300 second"
+
+  ```
+
+
+  Example Response Success
+
+  ```
+
+  {
+  	"status": true,
+  	"data": {
+  		"file_id": 17,
+  		"filename": "upload\/videos\/2025\/04\/uUdptrefdICOiBbWePNk_30_4bec33fd057fc274b0dad307ea736ad6ssstik.io_@2beha10ribu_1746019219677.mp4",
+  		"results": {
+  			"bahan": [
+  				"Mie instan 1 bungkus",
+  				"Bumbu mie instan",
+  				"Bawang merah 1 siung",
+  				"Bawang putih 1 siung",
+  				"Air secukupnya",
+  				"Telur 1 butir",
+  				"Minyak goreng secukupnya"
+  			],
+  			"cara": [
+  				"Iris bawang merah dan bawang putih.",
+  				"Panaskan minyak, tumis bawang hingga harum.",
+  				"Tambahkan air ke dalam wajan.",
+  				"Masukkan bumbu mie instan.",
+  				"Masukkan mie instan ke dalam wajan.",
+  				"Pecahkan telur, aduk rata.",
+  				"Masak hingga matang.",
+  				"Sajikan di piring."
+  			]
+  		}
+  	},
+  	"message": [
+  		"Success"
+  	]
+  }
+
+  ```
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_45566e4640634a2d90f775332924a6b3
+      name: file
+      value: ""
+      description: ""
+      type: file
+      fileName: C:\Users\satri\Downloads\ssstik.io_@2beha10ribu_1746019219677.mp4
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_d8552f145d584c78bf9d95edd359eb99
+  - id: pair_c3345e9fcfa54f7a9aca31ef0b86bdf5
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.user }}"
+metaSortKey: -1746014727397.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

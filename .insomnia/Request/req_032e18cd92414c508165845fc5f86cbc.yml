@@ -1,0 +1,40 @@
+_id: req_032e18cd92414c508165845fc5f86cbc
+type: Request
+parentId: fld_caf2935c107f4ec9952045dd355a67b9
+modified: 1746019921194
+created: 1746016959283
+url: "{{ _.api }}/upload/delete"
+name: Delete File
+description: |-
+  Required Body Json
+  ```
+  {
+  	"file_id": "required|numeric only"
+  }
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"file_id": "9"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - id: pair_c3345e9fcfa54f7a9aca31ef0b86bdf5
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.auditor }}"
+metaSortKey: -1746012879043.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

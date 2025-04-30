@@ -1,0 +1,84 @@
+_id: req_0b66948cd4c34e199751dd57370ff961
+type: Request
+parentId: fld_caf2935c107f4ec9952045dd355a67b9
+modified: 1746019971804
+created: 1746016575751
+url: "{{ _.api }}/upload"
+name: Upload File
+description: >-
+  Required Multipart/FormData
+
+
+  ```
+
+  {
+  	"file": "required|FILE|mimes type: jpg,png,jpeg,gif,mp4,m4v,webm,flv,mov,mpeg,mp3,wav,mkv,ogg,pdf,doc,docx",
+  	"convert": "nullable|in: 0 / 1"
+  }
+
+  ```
+
+
+  Jika convert == 1 dan 
+
+  - Jika file image maka sistem akan mengekstrak text yang ada pada gambar
+
+  - Jika file audio maka sistem akan mengconvert audio menjadi teks
+
+  - Jika file pdf/word maka sistem akan mengekstrak text yang ada pada gambar
+
+  - Jika file video maka tidak ada pengaruh apapun, untuk ekstrak video proses produksi gunakan api Upload Video Produksi
+
+
+  Example Response Success
+
+  ```
+
+  {
+  	"status": true,
+  	"data": {
+  		"file_id": 15,
+  		"path": "upload\/photos\/2025\/04\/cbAG8HsLj2BVswZ9l6Uz_30_7cb28b62784da401686858a177e0cf28_image.png",
+  		"results": null
+  	},
+  	"message": [
+  		"Success"
+  	]
+  }
+
+  ```
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_516229675477483ab7c6dc6759b126bb
+      name: file
+      value: ""
+      description: ""
+      type: file
+      fileName: C:\Users\satri\Downloads\label_halal_20250224_142822.png
+    - id: pair_fdc2e50358344f3ead0daa58cf9248f8
+      name: convert
+      value: "1"
+      description: ""
+      disabled: true
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_d8552f145d584c78bf9d95edd359eb99
+  - id: pair_c3345e9fcfa54f7a9aca31ef0b86bdf5
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.user }}"
+metaSortKey: -1746016575751
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

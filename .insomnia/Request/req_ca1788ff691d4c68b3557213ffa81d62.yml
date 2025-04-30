@@ -1,0 +1,52 @@
+_id: req_ca1788ff691d4c68b3557213ffa81d62
+type: Request
+parentId: fld_c8df452b2cd147649b9d7e6d9fc92417
+modified: 1746013045165
+created: 1746004624765
+url: "{{ _.api }}/sertifikasi-auditor/assign"
+name: Ambil Tugas
+description: |-
+  Required Body Json
+
+  ```
+  {
+  	"sertifikasi_id": "required"
+  }
+  ```
+
+  Example Response Success
+  ```
+  {
+  	"status": true,
+  	"data": true,
+  	"message": [
+  		"Success"
+  	]
+  }
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"sertifikasi_id": "165"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - id: pair_7a80f2fbf14b4ad98072880049d4e09a
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.auditor }}"
+metaSortKey: -1745999451479.5625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

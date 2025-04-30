@@ -1,0 +1,60 @@
+_id: req_661776e45a274094a743146e066ae938
+type: Request
+parentId: fld_a34d28b90e7d466ebc08019e712cb251
+modified: 1746013340950
+created: 1746004624760
+url: "{{ _.api }}/sertifikasi-auditor/165/verify-ktp"
+name: Verify KTP
+description: |-
+  URL
+  ```
+  {{ _.api }}/sertifikasi-auditor/{sertifikasi_id}/verify-ktp
+  ```
+
+  Required Body Multipart/FormData
+  ```
+  ktp_file: FILE|IMAGE
+  ```
+
+  Example Response Success
+
+  ```
+  {
+  	"status": true,
+  	"data": {
+  		"status": true
+  	},
+  	"message": [
+  		"Data KTP Sesuai"
+  	]
+  }
+  ```
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_fea4069570694f15af5f60ea4ff23de6
+      name: ktp_file
+      value: ""
+      description: ""
+      type: file
+      fileName: C:\Users\satri\Downloads\ktp uchiha.png
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+  - id: pair_7a80f2fbf14b4ad98072880049d4e09a
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.auditor }}"
+metaSortKey: -1746004806994
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

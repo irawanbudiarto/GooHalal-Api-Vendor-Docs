@@ -1,0 +1,40 @@
+_id: req_3c9e9c7acce8453a8a00f74c19425d2a
+type: Request
+parentId: fld_a0d6d9a64118440b933ea824c1a959b4
+modified: 1746026017379
+created: 1746001126485
+url: "{{ _.api }}/sertifikasi/token"
+name: Verifikasi Token
+description: |-
+  Required Body Json
+  ```
+  {
+  	"token": "required"
+  }
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"token": "SEHATI"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - id: pair_7a80f2fbf14b4ad98072880049d4e09a
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.user }}"
+metaSortKey: -1745999451479.5625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

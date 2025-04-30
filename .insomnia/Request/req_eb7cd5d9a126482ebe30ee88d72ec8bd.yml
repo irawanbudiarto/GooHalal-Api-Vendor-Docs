@@ -1,0 +1,64 @@
+_id: req_eb7cd5d9a126482ebe30ee88d72ec8bd
+type: Request
+parentId: fld_ab98833bd0c746f48abd92cfef831390
+modified: 1746026068870
+created: 1746005143937
+url: "{{ _.api }}/sertifikasi-fatwa/assign"
+name: Ambil Tugas
+description: |-
+  Required Body Json
+  ```
+  {
+  	"sertifikasi_id": "required | numeric"
+  }
+  ```
+
+  Example Response Success
+
+  ```
+  {
+  	"status": true,
+  	"data": true,
+  	"message": [
+  		"Berhasil"
+  	]
+  }
+  ```
+
+  Example Response Failed
+
+  ```
+  {
+  	"status": true,
+  	"data": false,
+  	"message": [
+  		"Berhasil"
+  	]
+  }
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"sertifikasi_id": "165"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - id: pair_7a80f2fbf14b4ad98072880049d4e09a
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.fatwa }}"
+metaSortKey: -1745999451479.5625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

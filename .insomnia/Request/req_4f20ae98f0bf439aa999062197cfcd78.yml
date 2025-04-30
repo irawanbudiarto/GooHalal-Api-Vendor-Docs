@@ -1,0 +1,37 @@
+_id: req_4f20ae98f0bf439aa999062197cfcd78
+type: Request
+parentId: fld_a22f73d86be9442094edcff1b30977fa
+modified: 1746023426942
+created: 1746005143905
+url: "{{ _.api }}/sertifikasi-fatwa/165"
+name: Detil
+description: |-
+  URL
+  ```
+  {{ _.api }}/sertifikasi-fatwa/{sertifikasi_id}
+  ```
+
+  Rule object status_fatwa
+
+  - Jika "waiting" maka bisa ke api Ambil Tugas
+  - Jika "assign" maka bisa menggunakan api Pemberian Fatwa
+  - Jika "done" maka proses sertifikasi selesai
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_7a80f2fbf14b4ad98072880049d4e09a
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.fatwa }}"
+metaSortKey: -1746004807094
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,45 @@
+_id: req_0f768da25dc242fea8eff0b11ceac288
+type: Request
+parentId: fld_36dd2e4e314e4e998d4934ae884e3b70
+modified: 1746026127536
+created: 1745999113010
+url: "{{ _.api }}/auth"
+name: Login
+description: |-
+  Required Body JSON
+
+  ```
+  {
+  	'username'      => 'required',
+  	'password'      => 'required',
+  	'device'        => 'nullable|in:web,android,ios,huawei',
+  	'device_token'  => 'nullable', // dari firebase device token,
+  	'device_detail' => 'nullable', // contoh: 'iPhone 15 Pro Max / Chrome'
+  }
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"username": "",
+    	"password": ""
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_6f47d8c3bc014ef68fc58335673d430f
+  - id: pair_af9e5128d554454b810460df231a182f
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication: {}
+metaSortKey: -1745999113010
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

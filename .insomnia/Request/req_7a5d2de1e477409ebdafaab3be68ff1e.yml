@@ -1,0 +1,42 @@
+_id: req_7a5d2de1e477409ebdafaab3be68ff1e
+type: Request
+parentId: wrk_b499b3cf9101497fb0005bc455d2d6fb
+modified: 1746024197843
+created: 1746020064301
+url: "{{ _.api }}/sertifikasi/payment-test"
+name: Payment Test
+description: |-
+  Required Body Json
+  ```
+  {
+  	"code": "required" from obj order_id, // example: GH-00000026
+  	"method": "required | success / cancel"
+  }
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"code": "GH-00000026",
+    	"method": "success"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - id: pair_abe4008b637647ada10b85b9346f3751
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.user }}"
+metaSortKey: -1743409978574.1875
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
