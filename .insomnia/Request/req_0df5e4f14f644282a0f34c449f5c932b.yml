@@ -1,7 +1,7 @@
 _id: req_0df5e4f14f644282a0f34c449f5c932b
 type: Request
 parentId: fld_a0d6d9a64118440b933ea824c1a959b4
-modified: 1746024050396
+modified: 1746121048788
 created: 1746001054336
 url: "{{ _.api }}/sertifikasi/new"
 name: Sertifikasi Baru
@@ -26,6 +26,9 @@ description: >-
   		'bank_id'               => 'nullable',
   		'token'                 => 'nullable',
   ```
+
+
+  * User wajib mengupload KTP terlebih dahulu sebelum bisa mengakses API ini
 
 
   * RPH Name akan berifat wajib jika is_daging = 1
@@ -261,6 +264,7 @@ parameters: []
 headers:
   - name: Content-Type
     value: multipart/form-data
+    id: pair_ad1a748d913442409f08655331a12e5b
   - id: pair_7a80f2fbf14b4ad98072880049d4e09a
     name: gh-key
     value: "{{ _.gh_key }}"

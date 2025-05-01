@@ -1,0 +1,58 @@
+_id: req_f757d9a5c54b4e2c956dfb5fe78282ba
+type: Request
+parentId: fld_36dd2e4e314e4e998d4934ae884e3b70
+modified: 1746120910112
+created: 1746120721538
+url: "{{ _.api }}/auth/save-ktp"
+name: Save KTP
+description: |-
+  Required Bearer Token
+
+  Required Body JSON
+
+  ```
+  {
+    'scan_id'       => 'required', // from API Upload KTP object scan_id
+    'nik'           => 'required', 
+    'nama'          => 'required',
+    'jenisKelamin'  => 'required',
+    'agama'         => 'required',
+    'tglLahir'      => 'required',
+    'alamat'        => 'required',
+    'phone'         => 'required',
+  }
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    		"scan_id"       : "",
+    		"nik"           : "", 
+    		"nama"          : "",
+    		"jenisKelamin"  : "",
+    		"agama"         : "",
+    		"tglLahir"      : "",
+    		"alamat"        : "",
+    		"phone"         : ""
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_6f47d8c3bc014ef68fc58335673d430f
+  - id: pair_af9e5128d554454b810460df231a182f
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.user }}"
+metaSortKey: -1745577092296.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

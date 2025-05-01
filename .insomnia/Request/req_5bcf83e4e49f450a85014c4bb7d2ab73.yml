@@ -1,0 +1,101 @@
+_id: req_5bcf83e4e49f450a85014c4bb7d2ab73
+type: Request
+parentId: fld_caf2935c107f4ec9952045dd355a67b9
+modified: 1746121934663
+created: 1746120570774
+url: "{{ _.api }}/upload/ktp"
+name: Upload & Scan KTP
+description: >-
+  Required Multipart/FormData
+
+  ```
+
+  {
+  	"file": "required | Image Only | Max: 10 MB"
+  }
+
+  ```
+
+
+  Example Respon Succcess
+
+  ```
+
+  {
+    "status": true,
+    "data": {
+      "user_id": 2898,
+      "ktp_file": "https:\/\/app.goohalal.com\/v1\/upload\/photos\/2025\/05\/96ZWsKFRmXOKz5dpHH8h_02_d3405basdas123asdasdadc1c39_image.jpg",
+      "nik": "3281239734123123",
+      "nama": "ANDRIANSYAH",
+      "jenisKelamin": "LAKI-LAKI",
+      "tglLahir": "07-06-1990",
+      "tmptLahir": "BEKASI",
+      "rt": "003",
+      "rw": "012",
+      "alamat": "JL RAMBUTAN 2 BLOK G 82",
+      "kelDes": "JATIMULYA",
+      "kecam": "TAMBUN SELATAN",
+      "agama": "ISLAM",
+      "provinsi": "PROVINSI JAWA BARAT",
+      "kabkot": "KABUPATEN BEKASI",
+      "tglTerbit": "31-05-2020",
+      "tmptTerbit": "BEKASI",
+      "golDar": "",
+      "statusKawin": "BELUM KAWIN",
+      "kewargaNegara": "WNI",
+      "pekerjaan": "PELAJAR\/MAHASISWA",
+      "berlakuHingga": "",
+      "scan_id": 65
+    },
+    "message": [
+      "KTP berhasil di scan, Mohon disesuaikan dengan data yang benar"
+    ]
+  }
+
+  ```
+
+
+  Example Respon Failed
+
+  ```
+
+  {
+    "status": false,
+    "data": null,
+    "message": [
+      "Foto KTP gagal di scan, silahkan unggah foto yang benar"
+    ]
+  }
+
+  ```
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - name: file
+      value: ""
+      id: pair_5df6177e95c447a4b52b73027b9a793e
+      type: file
+      multiline: null
+      fileName: C:\Users\satri\Downloads\label_halal_20250224_140201.png
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_84663910e06f4af7ad52164b80fff9fb
+  - id: pair_c3345e9fcfa54f7a9aca31ef0b86bdf5
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.user }}"
+metaSortKey: -1746013803220.375
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

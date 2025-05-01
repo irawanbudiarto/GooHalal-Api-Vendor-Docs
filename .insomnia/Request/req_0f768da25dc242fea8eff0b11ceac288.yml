@@ -1,14 +1,16 @@
 _id: req_0f768da25dc242fea8eff0b11ceac288
 type: Request
 parentId: fld_36dd2e4e314e4e998d4934ae884e3b70
-modified: 1746026127536
+modified: 1746121102844
 created: 1745999113010
 url: "{{ _.api }}/auth"
 name: Login
-description: |-
+description: >
   Required Body JSON
 
+
   ```
+
   {
   	'username'      => 'required',
   	'password'      => 'required',
@@ -16,14 +18,18 @@ description: |-
   	'device_token'  => 'nullable', // dari firebase device token,
   	'device_detail' => 'nullable', // contoh: 'iPhone 15 Pro Max / Chrome'
   }
+
   ```
+
+
+  * User dengan ktp_id == 0 Wajib mengupload ktp dan dikirim ke api Save KTP untuk mengakses fitur Sertifikasi
 method: POST
 body:
   mimeType: application/json
   text: |-
     {
-    	"username": "",
-    	"password": ""
+    	"username": "satriabaru@gmail.com",
+    	"password": "satria"
     }
 parameters: []
 headers:
@@ -34,7 +40,8 @@ headers:
     name: gh-key
     value: "{{ _.gh_key }}"
     description: ""
-authentication: {}
+authentication:
+  type: bearer
 metaSortKey: -1745999113010
 isPrivate: false
 settingStoreCookies: true
