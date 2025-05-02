@@ -1,7 +1,7 @@
 _id: req_0f768da25dc242fea8eff0b11ceac288
 type: Request
 parentId: fld_36dd2e4e314e4e998d4934ae884e3b70
-modified: 1746121102844
+modified: 1746159234356
 created: 1745999113010
 url: "{{ _.api }}/auth"
 name: Login
@@ -12,7 +12,7 @@ description: >
   ```
 
   {
-  	'username'      => 'required',
+  	'username'      => 'required | bisa di isi email / username',
   	'password'      => 'required',
   	'device'        => 'nullable|in:web,android,ios,huawei',
   	'device_token'  => 'nullable', // dari firebase device token,
@@ -22,14 +22,14 @@ description: >
   ```
 
 
-  * User dengan ktp_id == 0 Wajib mengupload ktp dan dikirim ke api Save KTP untuk mengakses fitur Sertifikasi
+  * User (diluar auditor dan fatwa) dengan ktp_id == 0 Wajib mengupload ktp dan dikirim ke api Save KTP untuk mengakses fitur Sertifikasi
 method: POST
 body:
   mimeType: application/json
   text: |-
     {
-    	"username": "satriabaru@gmail.com",
-    	"password": "satria"
+    	"username": "",
+    	"password": ""
     }
 parameters: []
 headers:

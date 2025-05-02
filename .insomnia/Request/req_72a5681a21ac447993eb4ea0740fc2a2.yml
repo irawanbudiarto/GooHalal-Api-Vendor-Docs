@@ -1,7 +1,7 @@
 _id: req_72a5681a21ac447993eb4ea0740fc2a2
 type: Request
 parentId: fld_36dd2e4e314e4e998d4934ae884e3b70
-modified: 1746120995486
+modified: 1746159211632
 created: 1746000224863
 url: "{{ _.api }}/auth/register"
 name: Register
@@ -35,10 +35,10 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"email": "satriabaru@gmail.com",
-    	"phone": "08123912839123",
-    	"password": "satria",
-    	"confirmPassword": "satria"
+    	"email": "",
+    	"phone": "",
+    	"password": "",
+    	"confirmPassword": ""
     }
 parameters: []
 headers:
