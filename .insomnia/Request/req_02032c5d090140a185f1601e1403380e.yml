@@ -1,0 +1,124 @@
+_id: req_02032c5d090140a185f1601e1403380e
+type: Request
+parentId: fld_651048d9ece14d9b8e1aa760e8e39712
+modified: 1746446520683
+created: 1746420216044
+url: "{{ _.api }}/list-sertifikat"
+name: List Sertifikat
+description: >-
+  Parameter Request
+
+
+  ```
+
+  Parameter | Required | Tipe | Contoh | Deksripsi
+
+  page | nullable | integer | 1 | Halaman per data
+
+  limit | nullable | integer | 10 | Jumlah data per halaman: default 10
+
+  sort | nullable | string | created_at | Kolom untuk pengurutan: default created_at
+
+  order | nullable | string | desc | Arah pengurutan (asc/desc)
+
+  sort[] | nullable | array | sort[0]=status | Multiple sorting columns
+
+  order[]	| nullable | array | order[0]=asc&order[1]=desc | Multiple sorting directions	
+
+  startDate | required | timestamp | 1714550400000 | Filter waktu mulai (millisecond)
+
+  endDate | required | timestamp | 1714636800000 | Filter waktu akhir (millisecond)	
+
+  status | nullable | string | pending | Filter berdasarkan status
+
+  include | nullable | string | user,auditor,fatwa,payment,timeline | Relasi yang disertakan
+
+
+  ```
+
+  Maximum range startDate dengan endDate adalah 10 menit
+
+
+
+  Status
+
+  - payment
+
+  - pending
+
+  - process
+
+  - success
+
+  - reject
+
+
+  (secara default tanpa filter)
+
+
+  include (bisa dikirim lebih dari satu dengan dipisahkan dengan tanda ",")
+
+  - user
+
+  - auditor
+
+  - fatwa
+
+  - payment
+
+  - timeline
+
+
+  ( secara default tanpa relasi )
+method: GET
+body: {}
+parameters:
+  - name: limit
+    value: "10"
+    description: ""
+    id: pair_b18daa4ba9054808aa9d86c7adaf03c8
+    disabled: false
+  - name: include
+    value: user,auditor,fatwa,payment,timeline
+    description: ""
+    id: pair_09e47ee922844f27a0286604897ccb67
+  - name: sort[0]
+    value: created_at
+    description: ""
+    id: pair_6933c6defe5e429f98e0f75ef7498bc3
+  - name: order[0]
+    value: asc
+    description: ""
+    id: pair_91edb7084bd74177a3906336543843fb
+  - name: startDate
+    value: ""
+    description: ""
+    id: pair_33a191c152554fa4904afb1168c62956
+  - name: endDate
+    value: ""
+    description: ""
+    id: pair_b3d5fa713ef04a749efef5863d430457
+  - name: debug_mode
+    value: satria
+    description: ""
+    id: pair_bd043e39421e4878b1014599b9cefc53
+headers:
+  - id: pair_abe4008b637647ada10b85b9346f3751
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+  - name: ""
+    value: ""
+    description: ""
+    id: pair_ec6236b463ac4f1e90b97850c7eabb18
+authentication:
+  type: bearer
+  token: "{{ _.user }}"
+metaSortKey: -1743444069309.6719
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
