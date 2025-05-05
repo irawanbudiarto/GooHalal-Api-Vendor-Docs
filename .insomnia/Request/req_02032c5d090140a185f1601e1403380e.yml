@@ -1,7 +1,7 @@
 _id: req_02032c5d090140a185f1601e1403380e
 type: Request
 parentId: fld_651048d9ece14d9b8e1aa760e8e39712
-modified: 1746446520683
+modified: 1746446858072
 created: 1746420216044
 url: "{{ _.api }}/list-sertifikat"
 name: List Sertifikat
@@ -107,13 +107,7 @@ headers:
     name: gh-key
     value: "{{ _.gh_key }}"
     description: ""
-  - name: ""
-    value: ""
-    description: ""
-    id: pair_ec6236b463ac4f1e90b97850c7eabb18
-authentication:
-  type: bearer
-  token: "{{ _.user }}"
+authentication: {}
 metaSortKey: -1743444069309.6719
 isPrivate: false
 settingStoreCookies: true

@@ -1,0 +1,27 @@
+_id: req_52330a363dff4146a3e0aa870eb3f6bd
+type: Request
+parentId: fld_36dd2e4e314e4e998d4934ae884e3b70
+modified: 1746446985002
+created: 1746446836747
+url: "{{ _.api }}/auth/me"
+name: Profile Data
+description: Required Bearer Token
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_af9e5128d554454b810460df231a182f
+    name: gh-key
+    value: "{{ _.gh_key }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.user }}"
+metaSortKey: -1745830304724.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
