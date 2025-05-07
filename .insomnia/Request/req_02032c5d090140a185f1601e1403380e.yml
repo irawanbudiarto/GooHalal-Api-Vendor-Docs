@@ -1,7 +1,7 @@
 _id: req_02032c5d090140a185f1601e1403380e
 type: Request
 parentId: fld_651048d9ece14d9b8e1aa760e8e39712
-modified: 1746446858072
+modified: 1746597213187
 created: 1746420216044
 url: "{{ _.api }}/list-sertifikat"
 name: List Sertifikat
@@ -98,10 +98,6 @@ parameters:
     value: ""
     description: ""
     id: pair_b3d5fa713ef04a749efef5863d430457
-  - name: debug_mode
-    value: satria
-    description: ""
-    id: pair_bd043e39421e4878b1014599b9cefc53
 headers:
   - id: pair_abe4008b637647ada10b85b9346f3751
     name: gh-key
